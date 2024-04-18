@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Hotel</title>
+    <!-- Ajoutez vos liens CSS ici -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion Hotel - Sunset Paradise</h1>
+        <nav>
+            <ul>
+                <li><a href="#chambres">Chambres</a></li>
+                <li><a href="#reservations">Réservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="chambres">
+            <h2>Chambres Disponibles</h2>
+            <!-- Liste des chambres -->
+            <div id="room-list">
+                <!-- Les chambres seront ajoutées ici via JavaScript -->
+            </div>
+        </section>
+
+        <section id="reservations">
+            <h2>Mes Réservations</h2>
+            <!-- Liste des réservations -->
+            <div id="reservation-list">
+                <!-- Les réservations seront ajoutées ici via JavaScript -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sunset Paradise Hotel - Tous droits réservés</p>
+    </footer>
+
+    <!-- Ajoutez vos scripts JavaScript ici -->
+    <script src="script.js"></script>
+</body>
+</html>

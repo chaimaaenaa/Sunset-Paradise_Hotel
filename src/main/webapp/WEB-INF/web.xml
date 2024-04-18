@@ -5,11 +5,11 @@
          id="WebApp_ID" version="4.0">
     <servlet>
         <servlet-name>RoomServlet</servlet-name>
-        <servlet-class>beans.servlets.RoomServlet</servlet-class>
+        <servlet-class>servlets.RoomServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ReservationServlet</servlet-name>
-        <servlet-class>beans.servlets.ReservationServlet</servlet-class>
+        <servlet-class>servlets.ReservationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RoomServlet</servlet-name>
