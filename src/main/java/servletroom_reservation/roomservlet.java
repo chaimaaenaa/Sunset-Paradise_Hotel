@@ -1,5 +1,4 @@
 package servlets;
-
 import dao.RoomDAO;
 import dao.RoomDAOImpl;
 import beans.Room;
@@ -16,8 +15,9 @@ public class RoomServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Room> rooms = roomDAO.getAllRooms();
-        // Convertir la liste de chambres en JSON et envoyer la réponse
+        // Converter la liste de chambres en JSON et envoyer la réponse
     }
 
     // Ajoutez d'autres méthodes pour gérer les requêtes POST, PUT, DELETE
+  
 }
