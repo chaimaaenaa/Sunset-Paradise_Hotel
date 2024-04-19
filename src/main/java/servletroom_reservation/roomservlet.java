@@ -1,23 +1,44 @@
-package servlets;
-import dao.RoomDAO;
+package servletroom_reservation;
 import dao.RoomDAOImpl;
-import beans.Room;
+import dao.RoomDAO;
 import java.io.IOException;
-import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
 
-public class RoomServlet extends HttpServlet {
-    private RoomDAO roomDAO = new RoomDAOImpl();
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Room> rooms = roomDAO.getAllRooms();
-        // Converter la liste de chambres en JSON et envoyer la réponse
+
+@WebServlet("/RoomServlet")
+public class Roomservlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public Roomservlet() {
+        super();
+        // TODO Auto-generated constructor stub
     }
 
-    // Ajoutez d'autres méthodes pour gérer les requêtes POST, PUT, DELETE
-  
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	RoomDAO roompl =new RoomDAOImpl();
+       
+            try {
+                request.setAttribute("rooms", roompl.displayRoom());
+               
+            } catch (ClassNotFoundException | SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            this.getServletContext().getRequestDispatcher("/WEB-INF/Hotel.jsp").forward(request, response);
+
+        }
+
+
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	doGet(request,response);
+       }
+
 }

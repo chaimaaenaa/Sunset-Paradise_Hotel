@@ -1,11 +1,12 @@
 package dao;
 
-import beans.Reservation;
+import les_classes.Reservation;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public interface ReservationDAO {
-    List<Reservation> getAllReservations();
-    List<Reservation> getReservationsByUserId(int userId);
-    boolean addReservation(Reservation reservation);
-    boolean deleteReservation(int reservationId);
+    List<Reservation> getAllReservations() throws ClassNotFoundException, SQLException;
+   
+   
 }

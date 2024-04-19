@@ -1,12 +1,11 @@
 package dao;
 
-import beans.Room;
+import les_classes.Room;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public interface RoomDAO {
-    List<Room> getAllRooms();
-    List<Room> searchRooms(Date startDate, Date endDate, String roomType, int numberOfGuests);
-    boolean updateRoomAvailability(int roomId, boolean availability);
-    boolean addRoom(Room room);
-    boolean deleteRoom(int roomId);
+    List<Room> displayRoom()throws ClassNotFoundException, SQLException;;
+    
 }

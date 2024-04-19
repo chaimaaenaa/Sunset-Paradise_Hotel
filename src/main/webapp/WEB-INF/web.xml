@@ -7,20 +7,10 @@
         <servlet-name>RoomServlet</servlet-name>
         <servlet-class>servletroom_reservation.RoomServlet</servlet-class>
     </servlet>
-    
-    <servlet>
-        <servlet-name>ReservationServlet</servlet-name>
-        <servlet-class>servletroom_reservation.ReservationServlet</servlet-class>
-    </servlet>
-    
     <servlet-mapping>
         <servlet-name>RoomServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     
-    
-    <servlet-mapping>
-        <servlet-name>ReservationServlet</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
+   
 </web-app>
