@@ -5,18 +5,22 @@
          id="WebApp_ID" version="4.0">
     <servlet>
         <servlet-name>RoomServlet</servlet-name>
-        <servlet-class>servlets.RoomServlet</servlet-class>
+        <servlet-class>servletroom_reservation.RoomServlet</servlet-class>
     </servlet>
+    
     <servlet>
         <servlet-name>ReservationServlet</servlet-name>
-        <servlet-class>servlets.ReservationServlet</servlet-class>
+        <servlet-class>servletroom_reservation.ReservationServlet</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>RoomServlet</servlet-name>
-        <url-pattern>/room/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+    
     <servlet-mapping>
         <servlet-name>ReservationServlet</servlet-name>
-        <url-pattern>/reservation/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
